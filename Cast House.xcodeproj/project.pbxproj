@@ -37,7 +37,7 @@
 		CE5CDFE81F8EDEEB008E3426 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFE71F8EDEEA008E3426 /* SearchViewController.swift */; };
 		CE5CDFEA1F8EDF07008E3426 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFE91F8EDF07008E3426 /* ProfileViewController.swift */; };
 		CE7A91BD1FD03177007D109D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A91BC1FD03177007D109D /* FeedViewController.swift */; };
-		CE7A91BF1FD04550007D109D /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CE7A91BE1FD04550007D109D /* readme.md */; };
+		CE7A91C31FD045C9007D109D /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CE7A91C21FD045C9007D109D /* readme.md */; };
 		CE7FF29B1FB12D6700E28A1E /* TopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF29A1FB12D6700E28A1E /* TopMenuViewController.swift */; };
 		CE7FF29D1FB325E200E28A1E /* TopMenuSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF29C1FB325E100E28A1E /* TopMenuSearchViewController.swift */; };
 		CE7FF2A31FB36DAE00E28A1E /* FeedItemsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF2A21FB36DAE00E28A1E /* FeedItemsModule.swift */; };
@@ -91,7 +91,7 @@
 		CE5CDFE91F8EDF07008E3426 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../New Group1/ProfileViewController.swift"; sourceTree = "<group>"; };
 		CE5CDFED1F927E2D008E3426 /* Cast House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cast House.entitlements"; sourceTree = "<group>"; };
 		CE7A91BC1FD03177007D109D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		CE7A91BE1FD04550007D109D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		CE7A91C21FD045C9007D109D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		CE7FF29A1FB12D6700E28A1E /* TopMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuViewController.swift; sourceTree = "<group>"; };
 		CE7FF29C1FB325E100E28A1E /* TopMenuSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuSearchViewController.swift; sourceTree = "<group>"; };
 		CE7FF2A21FB36DAE00E28A1E /* FeedItemsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsModule.swift; sourceTree = "<group>"; };
@@ -264,7 +264,6 @@
 		CEEA590E1F869CB6006846BE = {
 			isa = PBXGroup;
 			children = (
-				CE7A91BE1FD04550007D109D /* readme.md */,
 				CEEA59191F869CB6006846BE /* Cast House */,
 				CEEA59181F869CB6006846BE /* Products */,
 				B7A8AABF594AFAC95E7F1DDD /* Pods */,
@@ -297,6 +296,7 @@
 				CE1429BE1FBDCBD800E716CB /* Main Screens */,
 				CEEA591E1F869CB6006846BE /* Main.storyboard */,
 				CEEA591C1F869CB6006846BE /* ViewController.swift */,
+				CE7A91C21FD045C9007D109D /* readme.md */,
 			);
 			path = "Cast House";
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 				CE5CDFE21F8EB8B3008E3426 /* AsapCondensed-SemiBoldItalic.ttf in Resources */,
 				CE23F8711FCDA05C00F3000A /* Localizable.strings in Resources */,
 				CE5CDFE11F8EB8B3008E3426 /* AsapCondensed-SemiBold.ttf in Resources */,
-				CE7A91BF1FD04550007D109D /* readme.md in Resources */,
+				CE7A91C31FD045C9007D109D /* readme.md in Resources */,
 				CE5CDFDF1F8EB8B3008E3426 /* AsapCondensed-MediumItalic.ttf in Resources */,
 				CEEA59221F869CB6006846BE /* Assets.xcassets in Resources */,
 				CE5CDFDE1F8EB8B3008E3426 /* AsapCondensed-Medium.ttf in Resources */,
