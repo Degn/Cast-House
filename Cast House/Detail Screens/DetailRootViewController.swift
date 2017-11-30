@@ -69,7 +69,7 @@ class DetailRootViewController: UIViewController, UITableViewDelegate {
                 self.detailRootScrollView.contentOffset.x = (self.view.frame.width * CGFloat(self.currentDetailViewIndex-1))
             }, completion: nil)
         } else {
-            //
+            // Immediately show / hide
             detailRootScrollView.contentOffset.x = (self.view.frame.width * CGFloat(currentDetailViewIndex-1))
         }
     }
