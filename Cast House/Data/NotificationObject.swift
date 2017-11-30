@@ -11,21 +11,21 @@ import Firebase
 
 class NotificationObject: NSObject {
     
-    var id = String()
-    var type = String()
-    var text = String()
-    var sender_id = String()
-    var sender_image = UIImage()
+    var id: String!
+    var type: String!
+    var text: String?
+    var sender_id: String!
+    var sender_image: UIImage?
 
     func updateInfo(document: DocumentSnapshot) {
         id = document.documentID
         type = document["type"] as! String
-        text = document["text"] as! String
+        text = document["text"] as? String
         sender_id = document["sender"] as! String
     }
     
     func updateImage(urlString: String) {
         
-        // FIXME: missing function for updating the image
+        // FIXME: missing function for updating the image...
     }
 }

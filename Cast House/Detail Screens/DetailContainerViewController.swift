@@ -72,7 +72,7 @@ class DetailContainerViewController: UIViewController {
                 self.addChildViewController(detailShowViewController)
                 
                 let document = doc!.data()
-                showObject.updateInfo(document: doc!, updateImage: true)
+                showObject.populateInfo(document: doc!, updateImage: true)
                 self.titleLabel.text = document["title"] as? String
                 detailShowViewController.view.isHidden = false
                 detailShowViewController.view.isUserInteractionEnabled = true

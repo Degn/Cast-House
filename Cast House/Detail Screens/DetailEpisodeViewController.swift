@@ -16,7 +16,6 @@ class DetailEpisodeViewController: UIViewController {
     var showBG = UIView()
     var showCoverImageView = UIImageView()
     var showDescriptionLabel = UILabel()
-
     
     override func viewDidLoad() {
         
@@ -24,7 +23,7 @@ class DetailEpisodeViewController: UIViewController {
         showTableView.frame = self.view.bounds
         self.view.addSubview(showTableView)
         
-        // BG
+        // Show BG
         showBG.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         showTableView.tableHeaderView = showBG
         
@@ -34,7 +33,6 @@ class DetailEpisodeViewController: UIViewController {
         showCoverImageView.clipsToBounds = true
         showCoverImageView.contentMode = .scaleAspectFill
         showBG.addSubview(showCoverImageView)
-        
         
         // Description label
         showDescriptionLabel.numberOfLines = 0
@@ -49,11 +47,17 @@ class DetailEpisodeViewController: UIViewController {
     func setDetail(episodeObject: EpisodeObject) {
         
         self.showCoverImageView.image = episodeObject.image
-        updateDescriptionLabel(text: (episodeObject.descriptionText))
+        
+        if episodeObject.descriptionText != nil {
+            // update description text + label - if it's there.
+            updateDescriptionLabel(text: (episodeObject.descriptionText)!)
+        }
     }
     
     
     func updateDescriptionLabel(text: String) {
+        
+        // Update description text with lineSpacing and correct height of label.
         showDescriptionLabel.frame = CGRect(x: 16.0, y: self.view.frame.size.width/2 + 48.0, width: self.view.frame.size.width - 48.0, height: 0)
         
         let attributedString = NSMutableAttributedString(string: text)

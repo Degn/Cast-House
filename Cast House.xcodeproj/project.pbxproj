@@ -36,7 +36,7 @@
 		CE5CDFE61F8EB9C9008E3426 /* TopMenuLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFE51F8EB9C9008E3426 /* TopMenuLogo.swift */; };
 		CE5CDFE81F8EDEEB008E3426 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFE71F8EDEEA008E3426 /* SearchViewController.swift */; };
 		CE5CDFEA1F8EDF07008E3426 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFE91F8EDF07008E3426 /* ProfileViewController.swift */; };
-		CE5CDFEC1F8EDF23008E3426 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFEB1F8EDF23008E3426 /* FeedViewController.swift */; };
+		CE7A91BD1FD03177007D109D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A91BC1FD03177007D109D /* FeedViewController.swift */; };
 		CE7FF29B1FB12D6700E28A1E /* TopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF29A1FB12D6700E28A1E /* TopMenuViewController.swift */; };
 		CE7FF29D1FB325E200E28A1E /* TopMenuSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF29C1FB325E100E28A1E /* TopMenuSearchViewController.swift */; };
 		CE7FF2A31FB36DAE00E28A1E /* FeedItemsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FF2A21FB36DAE00E28A1E /* FeedItemsModule.swift */; };
@@ -88,8 +88,8 @@
 		CE5CDFE51F8EB9C9008E3426 /* TopMenuLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuLogo.swift; sourceTree = "<group>"; };
 		CE5CDFE71F8EDEEA008E3426 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CE5CDFE91F8EDF07008E3426 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../New Group1/ProfileViewController.swift"; sourceTree = "<group>"; };
-		CE5CDFEB1F8EDF23008E3426 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = "../New Group/FeedViewController.swift"; sourceTree = "<group>"; };
 		CE5CDFED1F927E2D008E3426 /* Cast House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cast House.entitlements"; sourceTree = "<group>"; };
+		CE7A91BC1FD03177007D109D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CE7FF29A1FB12D6700E28A1E /* TopMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuViewController.swift; sourceTree = "<group>"; };
 		CE7FF29C1FB325E100E28A1E /* TopMenuSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuSearchViewController.swift; sourceTree = "<group>"; };
 		CE7FF2A21FB36DAE00E28A1E /* FeedItemsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsModule.swift; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 		CEF1C08A1FC708C100D6A86C /* Home Feed */ = {
 			isa = PBXGroup;
 			children = (
-				CE5CDFEB1F8EDF23008E3426 /* FeedViewController.swift */,
+				CE7A91BC1FD03177007D109D /* FeedViewController.swift */,
 			);
 			path = "Home Feed";
 			sourceTree = "<group>";
@@ -545,6 +545,7 @@
 				CE4A1B491F94F0030047A2C8 /* LightBoxViewController.swift in Sources */,
 				CE4A1B4E1F97B3140047A2C8 /* CurrentUser.swift in Sources */,
 				CE5CDFE81F8EDEEB008E3426 /* SearchViewController.swift in Sources */,
+				CE7A91BD1FD03177007D109D /* FeedViewController.swift in Sources */,
 				CE23F86C1FC7B65900F3000A /* TabMenu.swift in Sources */,
 				CEEA591D1F869CB6006846BE /* ViewController.swift in Sources */,
 				CE7FF29D1FB325E200E28A1E /* TopMenuSearchViewController.swift in Sources */,
@@ -567,7 +568,6 @@
 				CE057DB41FC322F4002F16B6 /* SearchObjects.swift in Sources */,
 				CE96328B1FD0184100E6561F /* ShowObject.swift in Sources */,
 				CE1429C51FC08C4E00E716CB /* DetailShowEpisodeViewCell.swift in Sources */,
-				CE5CDFEC1F8EDF23008E3426 /* FeedViewController.swift in Sources */,
 				CE85E7CE1FC1D8D100EF3F13 /* DetailEpisodeViewController.swift in Sources */,
 				CE23F8761FCDB8A100F3000A /* ProfilePodcastCell.swift in Sources */,
 			);

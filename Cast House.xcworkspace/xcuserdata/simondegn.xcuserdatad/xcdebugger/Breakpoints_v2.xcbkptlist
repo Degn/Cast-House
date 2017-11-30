@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "updateInfo(document:updateImage:)"
+            landmarkName = "populateInfo(document:updateImage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

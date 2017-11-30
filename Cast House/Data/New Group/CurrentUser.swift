@@ -19,16 +19,17 @@ struct CurrentUserData {
 
 class CurrentUser: NSObject {
    
-    
     func isLoggedIn() -> Bool {
-        if (Auth.auth().currentUser?.uid != nil) {
-            print("logged in as \(String(describing: (Auth.auth().currentUser?.uid)!))")
-        }
-        return (Auth.auth().currentUser?.uid != nil)
+        
+        // Check if user is logged in
+        let userId = Auth.auth().currentUser?.uid
+        return userId != nil
     }
     
     
     func getUserInfo() {
+        // Download user object from firestore by the id from the auth.
+        
         let db = Firestore.firestore()
         CurrentUserData.id = (Auth.auth().currentUser?.uid)!
         db.collection("users").document(CurrentUserData.id).getDocument(completion: { (user, error) in
@@ -44,12 +45,15 @@ class CurrentUser: NSObject {
     }
     
     func getProfileImage(completion: @escaping (_ result: UIImage) -> Void) {
-        if (CurrentUserData.id != "") {
-            if CurrentUserData.image_url != "" {
+        // Download async profile image from URL
+        if CurrentUserData.image_url != "" {
+            DispatchQueue.global().async {
                 let url = URL(string: CurrentUserData.image_url)
                 let data = try? Data(contentsOf: url!)
-                CurrentUserData.profileImage = UIImage(data: data!)!
-                completion(CurrentUserData.profileImage)
+                DispatchQueue.main.async(execute: {
+                    CurrentUserData.profileImage = UIImage(data: data!)!
+                    completion(CurrentUserData.profileImage)
+                })
             }
         }
     }

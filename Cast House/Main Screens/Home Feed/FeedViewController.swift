@@ -106,7 +106,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         for document in querySnapshot.documents {
             
             let itemObject = ShowObject()
-            itemObject.updateInfo(document: document, updateImage: true)
+            itemObject.populateInfo(document: document, updateImage: true)
             tmpModuleItems[currentIndex] = itemObject
             
             currentIndex += 1
