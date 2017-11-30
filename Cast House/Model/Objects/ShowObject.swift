@@ -51,12 +51,16 @@ class ShowObject: NSObject {
         
         // Download image from image_url if it exists - when completed, then return the image.
         if self.image_url != "" {
-            DispatchQueue.global().async {
+            DispatchQueue.global(qos: .background).async {
                 let url = URL(string: self.image_url!)
                 let data = try? Data(contentsOf: url!)
                 DispatchQueue.main.async(execute: {
-                    self.image = UIImage(data: data!)!
-                    completion(self.image!)
+                    if data != nil {
+                        self.image = UIImage(data: data!)!
+                        completion(self.image!)
+                    } else {
+                        completion(UIImage())
+                    }
                 })
             }
         }

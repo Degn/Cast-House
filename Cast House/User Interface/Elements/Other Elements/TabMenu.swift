@@ -81,7 +81,6 @@ class TabMenu: UIView {
             whiteLabels.append(whiteLabel)
             whiteLabelView.addSubview(whiteLabel)
             
-            
             // Set the tab button
             let tab = UIButton()
             tab.tag = i
