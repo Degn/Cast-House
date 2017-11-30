@@ -28,18 +28,6 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
     var showDescriptionLabel = UILabel()
     var showEpisodesLabel = UILabel()
     var showAuthorLabel = UILabel()
-    var showEpisodesCountLabel = UILabel()
-    var showEpisodesTitleLabel = UILabel()
-    var showSubscribersCountLabel = UILabel()
-    var showSubscribersTitleLabel = UILabel()
-    var showLanguageLabel = UILabel()
-    var showLanguageTitleLabel = UILabel()
-    var showLastUpdateLabel = UILabel()
-    var showLastUpdateTitleLabel = UILabel()
-    var showExplicitLabel = UILabel()
-    var showExplicitTitleLabel = UILabel()
-    var showCategoryLabel = UILabel()
-    var showCategoryTitleLabel = UILabel()
     var showAuthorButton = UIButton()
     var episodesArray = [EpisodeObject]()
     var showDescriptionHeight = 0.0
@@ -198,10 +186,9 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         self.showAuthorLabel.text = showObject.author
+        showEpisodesLabel.text = "\(String(describing: showObject.episodesCount))"
         
-        showEpisodesCountLabel.text = "\(showObject.episodesCount)"
-        
-        updateDescriptionLabel(text: showObject.descriptionText)
+        updateDescriptionLabel(text: showObject.descriptionText!)
         currentPage = 0
         populateEpisodes(key: showObject.id, offsetDoc: nil)
     }
@@ -240,7 +227,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
                     var tmpLastDoc: DocumentSnapshot?
                     
                     for document in querySnapshot!.documents {
-                        var episodeObject = EpisodeObject()
+                        let episodeObject = EpisodeObject()
                         episodeObject.updateInfo(document: document, updateImage: true)
                         self.episodesArray.append(episodeObject)
                         tmpLastDoc = document
@@ -262,7 +249,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
                     var tmpLastDoc: DocumentSnapshot?
                     
                     for document in querySnapshot!.documents {
-                        var episodeObject = EpisodeObject()
+                        let episodeObject = EpisodeObject()
                         episodeObject.updateInfo(document: document, updateImage: true)
                         self.episodesArray.append(episodeObject)
                         tmpLastDoc = document
@@ -307,7 +294,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
         let image: UIImage = showCoverImageView.image!
         
         if episodeObject.image != nil {
-            // image = episodeObject.image as! UIImage
+            // image = episodeObject.image as! UIImage  (TODO!)
         }
         
         let detailRoot: DetailRootViewController = container!.detailRoot!
@@ -338,7 +325,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
             return cell
         }
         
-        var episodeObject = episodesArray[indexPath.row] as! EpisodeObject
+        let episodeObject = episodesArray[indexPath.row] as! EpisodeObject
         if episodesArray.count > indexPath.row {
             
             if episodeObject.title != nil {
@@ -346,7 +333,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             
             if episodeObject.descriptionText != nil {
-                let attributedString = NSMutableAttributedString(string: episodeObject.descriptionText)
+                let attributedString = NSMutableAttributedString(string: episodeObject.descriptionText!)
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.lineSpacing = 5.0
                 attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
@@ -355,7 +342,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
             
             if (episodeObject.image == nil) {
                 if (episodeObject.image_url != nil) {
-                    let url = URL(string: episodeObject.image_url)
+                    let url = URL(string: episodeObject.image_url!)
                     if (episodeObject.image_url != "") {
                        
                         cell.episodeImageview.cancelImageDownloadTask()
@@ -379,7 +366,7 @@ class DetailShowViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             } else {
                 // The image is already loaded and saved in the object
-                let originalImage: UIImage = episodeObject.image
+                let originalImage: UIImage = episodeObject.image!
                 cell.episodeImageview.image = originalImage
             }
         }

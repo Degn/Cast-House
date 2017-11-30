@@ -16,7 +16,7 @@ class ShowObject: NSObject {
     var author: String!
     var descriptionText: String?
     var episodesCount: Int?
-    var explicit: String? // Yes / No (FIXME: We need a way to convert all types of results here)
+    var explicit: String? // Yes / No (TODO: We need a way to convert all types of results here)
     var image_url: String?
     var image: UIImage?
     var lang: String?

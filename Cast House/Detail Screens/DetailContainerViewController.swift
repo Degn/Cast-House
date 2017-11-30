@@ -62,7 +62,7 @@ class DetailContainerViewController: UIViewController {
             let db = Firestore.firestore()
             let key = showObject.id
             
-            db.collection("shows").document(key).getDocument { (doc, error) in
+            db.collection("shows").document(key!).getDocument { (doc, error) in
                 
                 let detailShowViewController = DetailShowViewController()
                 detailShowViewController.container = self

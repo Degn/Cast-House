@@ -103,7 +103,7 @@ class PlayerView: UIView, AVAudioPlayerDelegate {
         
         playerEpisodeObject = episodeObject
         
-        let image:UIImage = episodeObject.image
+        let image:UIImage = episodeObject.image!
         let title = episodeObject.title
         let publisher = episodeObject.author
         
@@ -112,7 +112,7 @@ class PlayerView: UIView, AVAudioPlayerDelegate {
         episodeImageView.image = image
         
         let url = episodeObject.link
-        let fileURL: URL = URL(fileURLWithPath: url)
+        let fileURL: URL = URL(fileURLWithPath: url!)
         
         self.audioPlayer = AVPlayer.init(url: fileURL as URL)
         audioPlayer.volume = 1.0

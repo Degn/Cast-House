@@ -46,7 +46,7 @@ class DetailRootViewController: UIViewController, UITableViewDelegate {
         self.addChildViewController(container)
         detailViews.append(container)
         
-        // FIXME: Do a switch below...
+        // TODO: Do a switch below...
         
         if typeOfDetailItem == "show" {
             container.setShowDetail(showObject: parameter as! ShowObject)

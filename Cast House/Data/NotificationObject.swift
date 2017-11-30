@@ -26,6 +26,6 @@ class NotificationObject: NSObject {
     
     func updateImage(urlString: String) {
         
-        // FIXME: missing function for updating the image...
+        // TODO: missing function for updating the image...
     }
 }
