@@ -64,10 +64,12 @@ class DetailRootViewController: UIViewController, UITableViewDelegate {
         }
         
         if animated {
+            // Animating in or out
             UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.detailRootScrollView.contentOffset.x = (self.view.frame.width * CGFloat(self.currentDetailViewIndex-1))
             }, completion: nil)
         } else {
+            //
             detailRootScrollView.contentOffset.x = (self.view.frame.width * CGFloat(currentDetailViewIndex-1))
         }
     }
