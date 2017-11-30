@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Cast House
+
+  Created by Simon Degn on 28/11/2017.
+  Copyright © 2017 Simon Degn. All rights reserved.
+*/
+
+"Welcome" = "Velkommen";
+"Search Cast House..." = "Søg på Cast House...";
